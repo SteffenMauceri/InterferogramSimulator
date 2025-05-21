@@ -63,7 +63,7 @@ for idx = 1:length(fileNames)
     end
 
     linkaxesAll;
-    keyboard;
+    %keyboard;
 end
 
 end

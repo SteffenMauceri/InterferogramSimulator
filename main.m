@@ -17,9 +17,9 @@ close all;clear;clc;
 addpath('WZPUtil');
 
 %%% Control parameters %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-params.savePath = 'data/test';
+params.savePath = 'data/1k';
                                 % Data saving path
-params.totalNum = 50;           % Total number of samples
+params.totalNum = 1000;           % Total number of samples
 params.sampleSize = 256;        % Size of generated sample
 params.multilook = [1,4];       % multilook [Azimuth, Range]
 params.demFolder = 'DEM/unzip';
@@ -40,7 +40,7 @@ params.out.branchCut = 1;       % Horizontal branch-cut and vertical branch-cut 
 
 %%% Add phase components with a certain probability (0-1) %%%%%%%%%%%%%%%%%
 params.probSlop = 0.1;          % Slope phase
-params.probBuilding = 0.2;      % Building phase
+params.probBuilding = 0;      % Building phase
 params.probTurbulence = 0.8;    % Atmospheric turbulence phase, i.e., fractal Perlin noises
 params.probDeform = 0.2;        % Distorted two-dimensional Gaussian surface
 params.probEarthquake = 0.2;    % Deformation caused by earthquakes
@@ -59,4 +59,4 @@ params.Parallel = 0;
 generate(params);
 
 %% Show samples
-showSamples(params);
+% showSamples(params);
